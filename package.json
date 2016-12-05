@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-fictiv",
+  "version": "1.0.0",
+  "description": "Fictiv's JS linter style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fictiv/eslint-config-fictiv.git"
+  },
+  "keywords": [
+    "eslint-config",
+    "shareable",
+    "fictiv"
+  ],
+  "author": "C.J. Winslow <whoaa512@gmail.com> (https://github.com/whoaa512)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fictiv/eslint-config-fictiv/issues"
+  },
+  "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme"
+}
