@@ -39,7 +39,7 @@ module.exports = {
         // Override recommended rules
         //
         'comma-dangle': ['error', 'always-multiline'], // disallow or enforce trailing commas
-        'no-console': 'warning', // disallow use of console in the node environment
+        'no-console': 'warn', // disallow use of console in the node environment
         'no-unused-vars': ['error', { 'args': 'none' }], // disallow declaration of variables that are not used in the code
         'no-empty-function': ['error', {'allow': [ // Disallow empty functions for arrow functions
             'functions',
@@ -57,7 +57,7 @@ module.exports = {
         //
         // The following rules point out areas where you might have made mistakes.
         //
-        'no-extra-parens': ['warning', 'all'], // disallow unnecessary parentheses
+        'no-extra-parens': ['warn', 'all'], // disallow unnecessary parentheses
         'no-unexpected-multiline': 'error', // Avoid code that looks like two expressions but is actually one
         'valid-jsdoc': 'off', // Ensure JSDoc comments are valid
 
@@ -115,7 +115,7 @@ module.exports = {
         'no-useless-call': 'error', // disallow unnecessary .call() and .apply()
         'no-useless-concat': 'error', // disallow unnecessary concatenation of literals or template literals
         'no-void': 'error', // disallow use of void operator
-        'no-warning-comments': ['warning', {'terms': ['todo', 'fixme', '@todo', '@hack', 'hack'], 'location': 'start'}], // disallow usage of configurable warning terms in comments': 'error', // e.g. TODO or FIXME
+        'no-warning-comments': ['warn', {'terms': ['todo', 'fixme', '@todo', '@hack', 'hack'], 'location': 'start'}], // disallow usage of configurable warning terms in comments': 'error', // e.g. TODO or FIXME
         'no-with': 'error', // disallow use of the with statement
         'radix': 'error', // require use of the second argument for parseInt()
         'vars-on-top': 'off', // require declaration of all vars at the top of their containing scope
@@ -259,6 +259,6 @@ module.exports = {
         'react/self-closing-comp': 'error', // Prevent extra closing tags for components without children
         'react/prefer-es6-class': 'error', // Enforce ES5 or ES6 class for React Components
         'react/jsx-wrap-multilines': 'error', // Prevent missing parentheses around multilines JSX,
-        'react/jsx-no-bind': 'warning', // Prevent binding of functions within a JSX template definition
+        'react/jsx-no-bind': 'warn', // Prevent binding of functions within a JSX template definition
     },
 }
