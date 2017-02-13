@@ -22,7 +22,13 @@ module.exports = {
         //
         // Override recommended rules
         //
-        'comma-dangle': ['error', 'always-multiline'], // disallow or enforce trailing commas
+        'comma-dangle': ['error', {
+            arrays: 'always-multiline',
+            objects: 'always-multiline',
+            imports: 'always-multiline',
+            exports: 'always-multiline',
+            functions: 'always-multiline',
+        }], // enforce trailing commas
         'no-console': 'warn', // disallow use of console in the node environment
         'no-unused-vars': ['error', { 'args': 'none' }], // disallow declaration of variables that are not used in the code
         'no-empty-function': ['error', {'allow': [ // Disallow empty functions for arrow functions
