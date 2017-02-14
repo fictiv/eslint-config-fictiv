@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/fictiv/eslint-config-fictiv/issues"
   },
-  "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme"
+  "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme",
+  "dependencies": {
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-react": "^6.9.0"
+  }
 }

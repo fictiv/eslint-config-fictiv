@@ -16,7 +16,7 @@ module.exports = {
             jsx: true,
         },
     },
-    plugins: ['react'],
+    plugins: ['react', 'babel'],
     rules: {
 
         //
@@ -250,5 +250,12 @@ module.exports = {
         'react/prefer-es6-class': 'error', // Enforce ES5 or ES6 class for React Components
         'react/jsx-wrap-multilines': 'error', // Prevent missing parentheses around multilines JSX,
         'react/jsx-no-bind': 'warn', // Prevent binding of functions within a JSX template definition
+
+        //
+        // eslint-plugin-babel
+        //
+        // Babel specific linting rules for ESLint
+        //
+        'babel/no-invalid-this': 'error', // doesn't fail when inside class properties (class A { a = this.b; })
     },
 }
