@@ -80,7 +80,7 @@ module.exports = {
         'no-floating-decimal': 'error', // disallow the use of leading or trailing decimal points in numeric literals
         'no-implicit-coercion': 'off', // disallow the type conversions with shorter notations
         'no-implied-eval': 'error', // disallow use of eval()-like methods
-        'no-invalid-this': 'error', // disallow this keywords outside of classes or class-like objects
+        'no-invalid-this': 'off', // disallow this keywords outside of classes or class-like objects
         'no-iterator': 'error', // disallow usage of __iterator__ property
         'no-labels': 'error', // disallow use of labeled statements
         'no-lone-blocks': 'error', // disallow unnecessary nested blocks
