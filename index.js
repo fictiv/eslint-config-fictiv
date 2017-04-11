@@ -16,7 +16,7 @@ module.exports = {
             jsx: true,
         },
     },
-    plugins: ['react', 'babel'],
+    plugins: ['react', 'babel', 'import'],
     rules: {
 
         //
@@ -257,5 +257,24 @@ module.exports = {
         // Babel specific linting rules for ESLint
         //
         'babel/no-invalid-this': 'error', // doesn't fail when inside class properties (class A { a = this.b; })
+
+        //
+        // eslint-plugin-import
+        //
+        // Babel specific linting rules for ESLint
+        //
+        // Enforce a convention in the order of require() / import statements.
+        //      https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+        'import/order': ['error', {
+            'groups': [
+                'builtin',
+                'external',
+                'internal',
+                'parent',
+                'sibling',
+                'index',
+            ],
+            'newlines-between': 'always',
+        }],
     },
 }

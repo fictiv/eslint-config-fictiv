@@ -20,6 +20,7 @@
   "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme",
   "dependencies": {
     "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.9.0"
   }
 }
