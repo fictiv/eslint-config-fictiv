@@ -259,7 +259,7 @@ module.exports = {
         //
         // Enforce a convention in the order of require() / import statements.
         //      https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-        'import/order': ['error', {
+        'import/order': ['warn', {
             'groups': [
                 'builtin',
                 'external',
