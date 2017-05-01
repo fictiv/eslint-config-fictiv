@@ -211,7 +211,7 @@ module.exports = {
         'no-dupe-class-members': 'error', // disallow duplicate name in class members
         'no-this-before-super': 'error', // disallow use of this/super before calling super() in constructors.
         'no-var': 'error', // require let or const instead of var
-        'object-shorthand': 'off', // require method and property shorthand syntax for object literals
+        'object-shorthand': 'warn', // require method and property shorthand syntax for object literals
         'prefer-arrow-callback': 'error', // suggest using arrow functions as callbacks
         'prefer-const': 'error', // suggest using const declaration for variables that are never modified after declared
         'prefer-reflect': 'off', // suggest using Reflect methods where applicable
