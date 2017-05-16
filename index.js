@@ -1,6 +1,6 @@
 module.exports = {
     parser: 'babel-eslint',
-    extends: ['eslint:recommended', 'eslint-plugin-jest:recommended'],
+    extends: ['eslint:recommended', 'plugin:jest/recommended'],
     parserOptions: {
         ecmaVersion: 7,
         sourceType: 'module',
