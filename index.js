@@ -22,6 +22,11 @@ module.exports = {
         'promise',
         'flowtype-errors',
     ],
+    settings: {
+        flowtype: {
+            onlyFilesWithFlowAnnotation: true,
+        },
+    },
     rules: {
 
         //
@@ -362,6 +367,34 @@ module.exports = {
         //
         'promise/prefer-await-to-then': 'off',
         'promise/prefer-await-to-callbacks': 'error',
+
+        //
+        // eslint-plugin-flowtype
+        //
+        // flowtype specific linting rules for ESLint
+        //
+        'flowtype/boolean-style': ['error', 'boolean'],
+        'flowtype/define-flow-type': 'error',
+        'flowtype/delimiter-dangle': ['error', 'always-multiline'],
+        'flowtype/generic-spacing': ['error', 'never'],
+        'flowtype/no-dupe-keys': 'error',
+        'flowtype/no-primitive-constructor-types': 'error',
+        'flowtype/no-types-missing-file-annotation': 'error',
+        'flowtype/no-weak-types': 'warn',
+        'flowtype/object-type-delimiter': ['error', 'comma'],
+        'flowtype/require-parameter-type': ['warn', { excludeArrowFunctions: 'expressionsOnly', excludeParameterMatch: '^_' }],
+        'flowtype/require-return-type': ['error', 'always', { excludeArrowFunctions: 'expressionsOnly' }],
+        'flowtype/require-valid-file-annotation': ['warn', { annotationStyle: 'line' }],
+        'flowtype/require-variable-type': ['error', { excludeVariableMatch: '^_', excludeVariableTypes: { let: true } }],
+        'flowtype/semi': ['error', 'never'],
+        'flowtype/sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
+        'flowtype/space-after-type-colon': ['error', { allowLineBreak: true }],
+        'flowtype/space-before-generic-bracket': ['error', 'never'],
+        'flowtype/space-before-type-colon': ['error', 'never'],
+        'flowtype/type-id-match': 'error',
+        'flowtype/union-intersection-spacing': 'error',
+        'flowtype/use-flow-type': 'error',
+        'flowtype/valid-syntax': 'error',
 
         //
         // eslint-plugin-flowtype-errors

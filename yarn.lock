@@ -397,6 +397,12 @@ eslint-plugin-flowtype-errors@^3.3.1:
     babel-runtime "^6.23.0"
     slash "^1.0.0"
 
+eslint-plugin-flowtype@^2.35.0:
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.35.0.tgz#d17494f0ae8b727c632d8b9d4b4a848e7e0c04af"
+  dependencies:
+    lodash "^4.15.0"
+
 "eslint-plugin-import@https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz":
   version "2.7.0"
   resolved "https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz#1956d2c870420126fa146072728c1cbb2765268a"
@@ -831,7 +837,7 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
-lodash@^4.0.0, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.15.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
