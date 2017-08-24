@@ -14,7 +14,14 @@ module.exports = {
             jsx: true,
         },
     },
-    plugins: ['react', 'babel', 'import', 'jest'],
+    plugins: [
+        'react',
+        'babel',
+        'import',
+        'jest',
+        'promise',
+        'flowtype-errors',
+    ],
     rules: {
 
         //
@@ -353,8 +360,15 @@ module.exports = {
         //
         // Promise specific linting rules for ESLint
         //
-        'prefer-await-to-then': 'off',
-        'prefer-await-to-callbacks': 'error',
+        'promise/prefer-await-to-then': 'off',
+        'promise/prefer-await-to-callbacks': 'error',
+
+        //
+        // eslint-plugin-flowtype-errors
+        //
+        // flowtype-errors specific linting rules for ESLint
+        //
+        'flowtype-errors/show-errors': 'error',
 
     },
 }
