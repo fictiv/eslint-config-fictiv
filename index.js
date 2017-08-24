@@ -1,6 +1,10 @@
 module.exports = {
     parser: 'babel-eslint',
-    extends: ['eslint:recommended', 'plugin:jest/recommended'],
+    extends: [
+        'eslint:recommended',
+        'plugin:jest/recommended',
+        'plugin:promise/recommended',
+    ],
     parserOptions: {
         ecmaVersion: 7,
         sourceType: 'module',
@@ -342,5 +346,15 @@ module.exports = {
             ],
             'newlines-between': 'always',
         }],
+
+
+        //
+        // eslint-plugin-promise
+        //
+        // Promise specific linting rules for ESLint
+        //
+        'prefer-await-to-then': 'off',
+        'prefer-await-to-callbacks': 'error',
+
     },
 }
