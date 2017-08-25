@@ -298,7 +298,6 @@ module.exports = {
         'react/jsx-key': 'error',
         'react/jsx-max-props-per-line': ['error', { maximum: 2, multiline: true }],
         'react/jsx-no-bind': 'warn', // Prevent binding of functions within a JSX template definition
-        'react/jsx-no-duplicate-props': 'error',
         'react/jsx-no-duplicate-props': 'error', // Prevent duplicate props in JSX
         'react/jsx-no-undef': 'error', // Disallow undeclared variables in JSX
         'react/jsx-pascal-case': 'error',
