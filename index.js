@@ -207,7 +207,7 @@ module.exports = {
         'no-underscore-dangle': 'off', // disallow dangling underscores in identifiers
         'no-unneeded-ternary': ['error', { defaultAssignment: false }], // disallow the use of ternary operators when a simpler alternative exists
         'no-whitespace-before-property': 'error', // disallow whitespace before properties
-        'object-curly-newline': ['error', { minProperties: 2, consistent: true }],
+        'object-curly-newline': ['error', { minProperties: 3, consistent: true }],
         'object-curly-spacing': ['error', { allowMultiplePropertiesPerLine: false }],
         'object-property-newline': ['error', 'always'], // require or disallow padding inside curly braces
         'one-var': ['error', 'never'], // require or disallow one variable declaration per function
