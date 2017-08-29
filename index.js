@@ -180,7 +180,7 @@ module.exports = {
         'lines-around-comment': 'off', // enforce empty lines around comments
         'max-depth': ['error', 6], // specify the maximum depth that blocks can be nested
         'max-len': 'off', // specify the maximum length of a line in your program
-        'max-nested-callbacks': ['error', 3], // specify the maximum depth callbacks can be nested
+        'max-nested-callbacks': ['warn', 3], // specify the maximum depth callbacks can be nested
         'max-params': ['error', 3], // limits the number of parameters that can be used in the function declaration.
         'max-statements': 'off', // specify the maximum number of statement allowed in a function
         'max-statements-per-line': ['error', { max: 1 }], // specify the maximum number of statement allowed per line
