@@ -209,7 +209,7 @@ module.exports = {
         'no-whitespace-before-property': 'error', // disallow whitespace before properties
         'object-curly-newline': ['error', { minProperties: 3, consistent: true }],
         'object-curly-spacing': ['error', 'always'],
-        'object-property-newline': ['error', 'always', { allowMultiplePropertiesPerLine: false }], // require or disallow padding inside curly braces
+        'object-property-newline': ['error', { allowMultiplePropertiesPerLine: false }], // require or disallow padding inside curly braces
         'one-var': ['error', 'never'], // require or disallow one variable declaration per function
         'operator-assignment': 'error', // require assignment operator shorthand where possible or prohibit it entirely
         'operator-linebreak': ['error', 'after'], // enforce operators to be placed before or after line breaks
@@ -385,11 +385,11 @@ module.exports = {
         'flowtype/object-type-delimiter': ['error', 'comma'],
         'flowtype/require-parameter-type': ['warn', { excludeArrowFunctions: 'expressionsOnly', excludeParameterMatch: '^_' }],
         'flowtype/require-return-type': ['error', 'always', { excludeArrowFunctions: 'expressionsOnly' }],
-        'flowtype/require-valid-file-annotation': ['warn', { annotationStyle: 'line' }],
+        'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
         'flowtype/require-variable-type': ['error', { excludeVariableMatch: '^_', excludeVariableTypes: { let: true } }],
         'flowtype/semi': ['error', 'never'],
         'flowtype/sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
-        'flowtype/space-after-type-colon': ['error', { allowLineBreak: true }],
+        'flowtype/space-after-type-colon': ['error', 'always', { allowLineBreak: true }],
         'flowtype/space-before-generic-bracket': ['error', 'never'],
         'flowtype/space-before-type-colon': ['error', 'never'],
         'flowtype/type-id-match': 'error',
