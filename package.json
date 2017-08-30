@@ -25,7 +25,6 @@
     "eslint-plugin-flowtype-errors": "^3.3.1",
     "eslint-plugin-import": "https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz",
     "eslint-plugin-jest": "^20.0.3",
-    "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0"
   },
