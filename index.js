@@ -362,14 +362,6 @@ module.exports = {
 
 
         //
-        // eslint-plugin-promise
-        //
-        // Promise specific linting rules for ESLint
-        //
-        'promise/prefer-await-to-then': 'off',
-        'promise/prefer-await-to-callbacks': 'error',
-
-        //
         // eslint-plugin-flowtype
         //
         // flowtype specific linting rules for ESLint
