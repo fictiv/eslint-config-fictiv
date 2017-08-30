@@ -322,7 +322,7 @@ module.exports = {
         'react/no-multi-comp': 'off', // Prevent multiple component definition per file
         'react/no-redundant-should-component-update': 'error',
         'react/no-string-refs': 'error',
-        'react/no-typos': 'error',
+        // 'react/no-typos': 'error', // Turning off due to a weird crash bug
         'react/no-unescaped-entities': 'error',
         'react/no-unknown-property': 'error', // Prevent usage of unknown DOM property
         'react/no-will-update-set-state': 'error',
