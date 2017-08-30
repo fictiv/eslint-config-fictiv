@@ -207,7 +207,7 @@ module.exports = {
         'no-underscore-dangle': 'off', // disallow dangling underscores in identifiers
         'no-unneeded-ternary': ['error', { defaultAssignment: false }], // disallow the use of ternary operators when a simpler alternative exists
         'no-whitespace-before-property': 'error', // disallow whitespace before properties
-        'object-curly-newline': ['error', { minProperties: 3, consistent: true }],
+        'object-curly-newline': ['error', { minProperties: 3, multiline: true }],
         'object-curly-spacing': ['error', 'always'],
         'object-property-newline': ['error', { allowMultiplePropertiesPerLine: false }], // require or disallow padding inside curly braces
         'one-var': ['error', 'never'], // require or disallow one variable declaration per function
@@ -246,7 +246,7 @@ module.exports = {
         //
         // These rules are only relevant to ES6 environments.
         //
-        'arrow-body-style': ['error', 'as-needed'], // require braces in arrow function body
+        'arrow-body-style': 'off', // require braces in arrow function body
         'arrow-parens': 'error', // require parens in arrow function arguments
         'arrow-spacing': 'error', // require space before/after arrow function's arrow
         'constructor-super': 'error', // verify calls of super() in constructors
