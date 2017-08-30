@@ -221,7 +221,7 @@ module.exports = {
         'semi': ['error', 'never'], // require or disallow use of semicolons instead of ASI
         'semi-style': ['error', 'last'],
         'sort-vars': 'off', // sort variables within the same declaration block
-        'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }], // sort variables within the same declaration block
+        'sort-keys': ['error', 'asc', { caseSensitive: false, natural: true }], // sort variables within the same declaration block
         'space-before-blocks': ['error', 'always'], // require or disallow a space before blocks
         'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }], // require or disallow a space before function opening parenthesis
         'space-in-parens': 'error', // require or disallow spaces inside parentheses
