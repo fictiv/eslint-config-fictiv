@@ -22,7 +22,6 @@ module.exports = {
         'promise',
         'flowtype-errors',
         'flowtype',
-        'no-use-extend-native',
     ],
     settings: {
         flowtype: {
@@ -395,13 +394,5 @@ module.exports = {
         // flowtype-errors specific linting rules for ESLint
         //
         'flowtype-errors/show-errors': 'error',
-
-        //
-        // eslint-plugin-no-use-extend-native
-        //
-        // no-use-extend-native specific linting rules for ESLint
-        //
-        'no-use-extend-native/no-use-extend-native': 'error',
-
     },
 }
