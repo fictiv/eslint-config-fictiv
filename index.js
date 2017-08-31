@@ -40,7 +40,7 @@ module.exports = {
             exports: 'always-multiline',
             functions: 'always-multiline',
         }], // enforce trailing commas
-        'no-console': 'warn', // disallow use of console in the node environment
+        'no-console': 'error', // disallow use of console in the node environment
         'no-unused-vars': ['error', { 'args': 'none' }], // disallow declaration of variables that are not used in the code
         'no-empty-function': ['error', {'allow': [ // Disallow empty functions for arrow functions
             'functions',
