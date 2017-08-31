@@ -98,7 +98,7 @@ module.exports = {
         'no-labels': 'error', // disallow use of labeled statements
         'no-lone-blocks': 'error', // disallow unnecessary nested blocks
         'no-loop-func': 'error', // disallow creation of functions within loops
-        'no-magic-numbers': 'error', // disallow the use of magic numbers
+        'no-magic-numbers': ['error', { ignoreArrayIndexes: true }], // disallow the use of magic numbers
         'no-multi-spaces': 'error', // disallow use of multiple spaces
         'no-multi-str': 'error', // disallow use of multiline strings
         'no-native-reassign': 'error', // disallow reassignments of native objects
