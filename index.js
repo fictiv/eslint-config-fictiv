@@ -28,6 +28,15 @@ module.exports = {
             onlyFilesWithFlowAnnotation: true,
         },
     },
+    overrides: [
+        {
+            files: ['**/__tests__/**'],
+            rules: {
+                'max-depth': 'off',
+                'max-nested-callbacks': 'off',
+            }
+        }
+    ],
     rules: {
 
         //
