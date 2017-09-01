@@ -262,7 +262,7 @@ module.exports = {
         'object-shorthand': 'error', // require method and property shorthand syntax for object literals
         'prefer-arrow-callback': 'error', // suggest using arrow functions as callbacks
         'prefer-const': 'error', // suggest using const declaration for variables that are never modified after declared
-        'prefer-destructuring': ['error', { object: true, array: true }, { enforceForRenamedProperties: true }],
+        'prefer-destructuring': ['error', { object: true, array: false }, { enforceForRenamedProperties: false }],
         'prefer-reflect': 'off', // suggest using Reflect methods where applicable
         'prefer-rest-params': 'error',
         'prefer-spread': 'error', // suggest using the spread operator instead of .apply().
