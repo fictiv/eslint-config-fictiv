@@ -393,6 +393,6 @@ module.exports = {
         //
         // flowtype-errors specific linting rules for ESLint
         //
-        'flowtype-errors/show-errors': 'off',
+        'flowtype-errors/show-errors': 'warn',
     },
 }
