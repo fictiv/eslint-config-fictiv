@@ -4,7 +4,7 @@
 Here is a list of things we want to allow but have not found the proper eslint config/plugin to support our style
   - Snake case attributes for API payloads
     + Workaround: wrap the block in eslint disable/enable
-    + ```
+    ```
     /*eslint-disable camelcase*/
     .insert({
         created_at: NOW,
