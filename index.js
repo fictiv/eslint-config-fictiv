@@ -177,7 +177,7 @@ module.exports = {
         'keyword-spacing': 'error', // require a space before/after certain keywords
         'linebreak-style': 'error', // disallow mixed 'LF' and 'CRLF' as linebreaks
         'lines-around-comment': 'off', // enforce empty lines around comments
-        'max-depth': ['error', 6], // specify the maximum depth that blocks can be nested
+        'max-depth': ['warn', 6], // specify the maximum depth that blocks can be nested
         'max-len': 'off', // specify the maximum length of a line in your program
         'max-nested-callbacks': ['warn', 3], // specify the maximum depth callbacks can be nested
         'max-params': ['error', 3], // limits the number of parameters that can be used in the function declaration.
@@ -366,33 +366,33 @@ module.exports = {
         // flowtype specific linting rules for ESLint
         //
         'flowtype/boolean-style': ['error', 'boolean'],
-        'flowtype/define-flow-type': 'error',
+        'flowtype/define-flow-type': 'warn',
         'flowtype/delimiter-dangle': ['error', 'always-multiline'],
         'flowtype/generic-spacing': ['error', 'never'],
         'flowtype/no-dupe-keys': 'error',
-        'flowtype/no-primitive-constructor-types': 'error',
+        'flowtype/no-primitive-constructor-types': 'off',
         'flowtype/no-types-missing-file-annotation': 'error',
-        'flowtype/no-weak-types': 'warn',
+        'flowtype/no-weak-types': 'off',
         'flowtype/object-type-delimiter': ['error', 'comma'],
-        'flowtype/require-parameter-type': ['warn', { excludeArrowFunctions: 'expressionsOnly', excludeParameterMatch: '^_' }],
-        'flowtype/require-return-type': ['error', 'always', { excludeArrowFunctions: 'expressionsOnly' }],
+        'flowtype/require-parameter-type': ['off', { excludeArrowFunctions: 'expressionsOnly', excludeParameterMatch: '^_' }],
+        'flowtype/require-return-type': ['off', 'always', { excludeArrowFunctions: 'expressionsOnly' }],
         'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
-        'flowtype/require-variable-type': ['error', { excludeVariableMatch: '^_', excludeVariableTypes: { let: true } }],
+        'flowtype/require-variable-type': ['off', { excludeVariableMatch: '^_', excludeVariableTypes: { let: true } }],
         'flowtype/semi': ['error', 'never'],
         'flowtype/sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
         'flowtype/space-after-type-colon': ['error', 'always', { allowLineBreak: true }],
         'flowtype/space-before-generic-bracket': ['error', 'never'],
         'flowtype/space-before-type-colon': ['error', 'never'],
-        'flowtype/type-id-match': 'error',
+        'flowtype/type-id-match': 'warn',
         'flowtype/union-intersection-spacing': 'error',
-        'flowtype/use-flow-type': 'error',
-        'flowtype/valid-syntax': 'error',
+        'flowtype/use-flow-type': 'warn',
+        'flowtype/valid-syntax': 'warn',
 
         //
         // eslint-plugin-flowtype-errors
         //
         // flowtype-errors specific linting rules for ESLint
         //
-        'flowtype-errors/show-errors': 'error',
+        'flowtype-errors/show-errors': 'off',
     },
 }
