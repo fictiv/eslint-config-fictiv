@@ -30,6 +30,10 @@ module.exports = {
         'prettier',
     ],
     settings: {
+        'import/internal-module-folders': ['~/'],
+        'import/resolver': {
+            'babel-module': {},
+        },
         flowtype: {
             onlyFilesWithFlowAnnotation: true,
         },
