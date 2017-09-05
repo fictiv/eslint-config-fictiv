@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme",
   "bin": {
-    "fictiv-fmt": "prettier-eslint"
+    "fictiv-fmt": "./fictiv-fmt.js"
   },
   "dependencies": {
     "babel-eslint": "^7.2.3",
@@ -32,6 +32,7 @@
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
+    "loglevel-colored-level-prefix": "^1.0.0",
     "prettier-eslint-cli": "^4.3.0"
   },
   "devDependencies": {
