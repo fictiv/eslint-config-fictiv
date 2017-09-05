@@ -1,13 +1,4 @@
-const prettierOptions = {
-    printWidth: 80,
-    tabWidth: 4,
-    useTabs: false,
-    semi: false,
-    singleQuote: true,
-    trailingComma: 'all',
-    bracketSpacing: true,
-    jsxBracketSameLine: false,
-}
+const prettierOptions = require('./prettierOptions')
 
 module.exports = {
     parser: 'babel-eslint',
