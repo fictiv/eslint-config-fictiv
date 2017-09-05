@@ -18,6 +18,9 @@
     "url": "https://github.com/fictiv/eslint-config-fictiv/issues"
   },
   "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme",
+  "bin": {
+    "fictiv-fmt": "prettier-eslint"
+  },
   "dependencies": {
     "babel-eslint": "^7.2.3",
     "eslint-config-prettier": "^2.4.0",
@@ -28,7 +31,8 @@
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.3.0"
+    "eslint-plugin-react": "^7.3.0",
+    "prettier-eslint-cli": "^4.3.0"
   },
   "devDependencies": {
     "eslint": ">=4.2.0",
