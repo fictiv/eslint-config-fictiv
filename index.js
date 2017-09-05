@@ -1,9 +1,23 @@
+const prettierOptions = {
+    printWidth: 80,
+    tabWidth: 4,
+    useTabs: false,
+    semi: false,
+    singleQuote: true,
+    trailingComma: 'all',
+    bracketSpacing: true,
+    jsxBracketSameLine: false,
+}
+
 module.exports = {
     parser: 'babel-eslint',
     extends: [
         'eslint:recommended',
         'plugin:jest/recommended',
         'plugin:promise/recommended',
+        'prettier',
+        'prettier/flowtype',
+        'prettier/react',
     ],
     parserOptions: {
         ecmaVersion: 7,
@@ -22,6 +36,7 @@ module.exports = {
         'promise',
         'flowtype-errors',
         'flowtype',
+        'prettier',
     ],
     settings: {
         flowtype: {
@@ -42,13 +57,6 @@ module.exports = {
         //
         // Override recommended rules
         //
-        'comma-dangle': ['error', {
-            arrays: 'always-multiline',
-            objects: 'always-multiline',
-            imports: 'always-multiline',
-            exports: 'always-multiline',
-            functions: 'always-multiline',
-        }], // enforce trailing commas
         'no-console': 'error', // disallow use of console in the node environment
         'no-unused-vars': ['error', { 'args': 'none' }], // disallow declaration of variables that are not used in the code
         'no-empty-function': ['error', {'allow': [ // Disallow empty functions for arrow functions
@@ -67,7 +75,6 @@ module.exports = {
         //
         // The following rules point out areas where you might have made mistakes.
         //
-        'no-extra-parens': ['warn', 'all'], // disallow unnecessary parentheses
         'no-unexpected-multiline': 'error', // Avoid code that looks like two expressions but is actually one
         'valid-jsdoc': 'off', // Ensure JSDoc comments are valid
         'no-template-curly-in-string': 'error', // Disallow template literal placeholder syntax in regular strings
@@ -84,7 +91,6 @@ module.exports = {
         'consistent-return': 'error', // require return statements to either always or never specify values
         'curly': 'error', // specify curly brace conventions for all control statements
         'default-case': 'error', // require default case in switch statements
-        'dot-location': ['error', 'property'], // enforces consistent newlines before or after dots
         'dot-notation': 'off', // encourages use of dot notation whenever possible
         'eqeqeq': ['error', 'allow-null'], // require the use of === and !==
         'guard-for-in': 'error', // make sure for-in loops have an if statement
@@ -108,7 +114,6 @@ module.exports = {
         'no-lone-blocks': 'error', // disallow unnecessary nested blocks
         'no-loop-func': 'error', // disallow creation of functions within loops
         'no-magic-numbers': ['error', { ignore: [-3, -2, -1, 0, 1, 2, 3], ignoreArrayIndexes: true }], // disallow the use of magic numbers
-        'no-multi-spaces': 'error', // disallow use of multiple spaces
         'no-multi-str': 'error', // disallow use of multiline strings
         'no-native-reassign': 'error', // disallow reassignments of native objects
         'no-new-func': 'error', // disallow use of new operator for Function object
@@ -134,7 +139,6 @@ module.exports = {
         'prefer-promise-reject-errors': 'error', // require using Error objects as Promise rejection reasons
         'radix': 'error', // require use of the second argument for parseInt()
         'vars-on-top': 'off', // require declaration of all vars at the top of their containing scope
-        'wrap-iife': 'off', // require immediate function invocation to be wrapped in parentheses
         'yoda': 'off', // require or disallow Yoda conditions
         'array-callback-return': 'error',
 
@@ -165,25 +169,13 @@ module.exports = {
         // These rules are purely matters of style and are quite subjective.
         //
 
-        'array-bracket-spacing': ['error', 'never'], // enforce spacing inside array brackets
-        'block-spacing': 'error', // disallow or enforce spaces inside of single line blocks
-        'brace-style': ['error', '1tbs', { 'allowSingleLine': false }], // enforce one true brace style
         'camelcase': 'error', // require camel case names
-        'comma-spacing': 'error', // enforce spacing before and after comma
-        'comma-style': 'error', // enforce one true comma style
-        'computed-property-spacing': 'error', // require or disallow padding inside computed properties
         'consistent-this': 'off', // enforce consistent naming when capturing the current execution context
-        'eol-last': 'error', // enforce newline at the end of file, with no multiple empty lines
-        'func-call-spacing': 'error', // require or disallow spacing between function identifiers and their invocations
         'func-name-matching': 'error', // require function names to match the name of the variable or property to which they are assigned
         'func-names': 'error', // require function expressions to have a name
         'func-style': ['error', 'declaration', { allowArrowFunctions: true }], // enforce use of function declarations or expressions
         'id-length': 'off', // this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
         'id-match': 'off', // require identifiers to match the provided regular expression
-        'indent': 'error', // specify tab or space width for your code
-        'jsx-quotes': 'off', // specify whether double or single quotes should be used in JSX attributes
-        'key-spacing': 'error', // enforce spacing between keys and values in object literal properties
-        'keyword-spacing': 'error', // require a space before/after certain keywords
         'linebreak-style': 'error', // disallow mixed 'LF' and 'CRLF' as linebreaks
         'lines-around-comment': 'off', // enforce empty lines around comments
         'max-depth': ['warn', 6], // specify the maximum depth that blocks can be nested
@@ -192,53 +184,29 @@ module.exports = {
         'max-params': ['error', 3], // limits the number of parameters that can be used in the function declaration.
         'max-statements': 'off', // specify the maximum number of statement allowed in a function
         'max-statements-per-line': ['error', { max: 1 }], // specify the maximum number of statement allowed per line
-        'multiline-ternary': ['error', 'always-multiline'], // enforce newlines between operands of ternary expressions
         'new-cap': 'error', // require a capital letter for constructors
-        'new-parens': 'off', // disallow the omission of parentheses when invoking a constructor with no arguments
         'newline-after-var': 'error', // require or disallow an empty newline after variable declarations
-        'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }], // require a newline after each call in a method chain
         'no-array-constructor': 'error', // disallow use of the Array constructor
         'no-bitwise': 'off', // disallow use of bitwise operators
         'no-continue': 'off', // disallow use of the continue statement
         'no-inline-comments': 'off', // disallow comments inline after code
         'no-lonely-if': 'error', // disallow if as the only statement in an else block
-        'no-multiple-empty-lines': ['warn', { maxEOF: 1, maxBOF: 0, max: 1 }], // disallow multiple empty lines
         'no-negated-condition': 'off', // disallow negated conditions
         'no-nested-ternary': 'off', // disallow nested ternary expressions
         'no-new-object': 'error', // disallow the use of the Object constructor
         'no-plusplus': 'off', // disallow use of unary operators, ++ and --
         'no-restricted-syntax': 'off', // disallow use of certain syntax in code
-        'no-spaced-func': 'error', // disallow space between function identifier and application
         'no-tabs': 'error', // disallow all tabs
         'no-ternary': 'off', // disallow the use of ternary operators
-        'no-trailing-spaces': 'error', // disallow trailing whitespace at the end of lines
         'no-underscore-dangle': 'off', // disallow dangling underscores in identifiers
         'no-unneeded-ternary': ['error', { defaultAssignment: false }], // disallow the use of ternary operators when a simpler alternative exists
-        'no-whitespace-before-property': 'error', // disallow whitespace before properties
-        'object-curly-newline': ['error', { minProperties: 3, multiline: true }],
-        'object-curly-spacing': ['error', 'always'],
-        'object-property-newline': ['error', { allowMultiplePropertiesPerLine: false }], // require or disallow padding inside curly braces
         'one-var': ['error', 'never'], // require or disallow one variable declaration per function
         'operator-assignment': 'error', // require assignment operator shorthand where possible or prohibit it entirely
-        'operator-linebreak': ['error', 'after'], // enforce operators to be placed before or after line breaks
-        'padded-blocks': ['error', 'never'], // enforce padding within blocks
-        'quote-props': ['error', 'as-needed'], // require quotes around object literal property names
         'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }], // specify whether backticks, double or single quotes should be used
         'require-jsdoc': 'off', // Require JSDoc comment
-        'semi-spacing': 'error', // enforce spacing before and after semicolons
-        'semi': ['error', 'never'], // require or disallow use of semicolons instead of ASI
-        'semi-style': ['error', 'last'],
         'sort-vars': 'off', // sort variables within the same declaration block
         'sort-keys': ['error', 'asc', { caseSensitive: false, natural: true }], // sort variables within the same declaration block
-        'space-before-blocks': ['error', 'always'], // require or disallow a space before blocks
-        'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }], // require or disallow a space before function opening parenthesis
-        'space-in-parens': 'error', // require or disallow spaces inside parentheses
-        'space-infix-ops': 'error', // require spaces around operators
-        'space-unary-ops': ['error', { words: true, nonwords: false }], // require or disallow spaces before/after unary operators
         'spaced-comment': 'off', // require or disallow a space immediately following the // or /* in a comment
-        'switch-colon-spacing': 'error',
-        'template-tag-spacing': 'error',
-        'wrap-regex': 'off', // require regex literals to be wrapped in parentheses
 
         //
         // Node.js and Commonjs
@@ -255,10 +223,7 @@ module.exports = {
         // These rules are only relevant to ES6 environments.
         //
         'arrow-body-style': 'off', // require braces in arrow function body
-        'arrow-parens': 'error', // require parens in arrow function arguments
-        'arrow-spacing': 'error', // require space before/after arrow function's arrow
         'constructor-super': 'error', // verify calls of super() in constructors
-        'generator-star-spacing': 'error', // enforce spacing around the * in generator functions
         'no-class-assign': 'error', // disallow modifying variables of class declarations
         'no-confusing-arrow': 'error', // disallow arrow functions where a condition is expected
         'no-const-assign': 'error', // disallow modifying variables that are declared using const
@@ -277,10 +242,7 @@ module.exports = {
         'prefer-spread': 'error', // suggest using the spread operator instead of .apply().
         'prefer-template': 'error', // suggest using template literals instead of strings concatenation
         'require-yield': 'error', // disallow generator functions that do not have yield
-        'rest-spread-spacing': 'error',
-        'template-curly-spacing': 'error',
         'symbol-description': 'error',
-        'yield-star-spacing': 'error',
 
         //
         // eslint-plugin-react
@@ -291,20 +253,8 @@ module.exports = {
         'react/boolean-prop-naming': 'error',
         'react/forbid-foreign-prop-types': 'error',
         'react/jsx-boolean-value': 'error', // Enforce boolean attributes notation in JSX (fixable)
-        'react/jsx-closing-bracket-location': 'error',
-        'react/jsx-closing-tag-location': 'error',
-        'react/jsx-curly-spacing': ['error', {
-            when: 'never',
-            allowMultiline: true,
-            children: true,
-        }],
-        'react/jsx-equals-spacing': 'error',
         'react/jsx-filename-extension': 'error',
-        'react/jsx-first-prop-new-line': ['error', 'multiline'],
-        'react/jsx-indent': ['error', 4],
-        'react/jsx-indent-props': ['error', 4],
         'react/jsx-key': 'error',
-        'react/jsx-max-props-per-line': ['error', { maximum: 2, multiline: true }],
         'react/jsx-no-bind': 'warn', // Prevent binding of functions within a JSX template definition
         'react/jsx-no-duplicate-props': 'error', // Prevent duplicate props in JSX
         'react/jsx-no-undef': 'error', // Disallow undeclared variables in JSX
@@ -317,7 +267,6 @@ module.exports = {
         }],
         'react/jsx-uses-react': 'error', // Prevent React to be incorrectly marked as unused
         'react/jsx-uses-vars': 'error', // Prevent variables used in JSX to be incorrectly marked as unused
-        'react/jsx-wrap-multilines': 'error', // Prevent missing parentheses around multilines JSX,
         'react/no-array-index-key': 'error',
         'react/no-danger': 'error', // Prevent usage of dangerous JSX properties
         'react/no-danger-with-children': 'error',
@@ -376,24 +325,16 @@ module.exports = {
         //
         'flowtype/boolean-style': ['error', 'boolean'],
         'flowtype/define-flow-type': 'warn',
-        'flowtype/delimiter-dangle': ['error', 'always-multiline'],
-        'flowtype/generic-spacing': ['error', 'never'],
         'flowtype/no-dupe-keys': 'error',
         'flowtype/no-primitive-constructor-types': 'off',
         'flowtype/no-types-missing-file-annotation': 'error',
         'flowtype/no-weak-types': 'off',
-        'flowtype/object-type-delimiter': ['error', 'comma'],
-        'flowtype/require-parameter-type': ['off', { excludeArrowFunctions: 'expressionsOnly', excludeParameterMatch: '^_' }],
-        'flowtype/require-return-type': ['off', 'always', { excludeArrowFunctions: 'expressionsOnly' }],
+        'flowtype/require-parameter-type': 'off',
+        'flowtype/require-return-type': 'off',
         'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
-        'flowtype/require-variable-type': ['off', { excludeVariableMatch: '^_', excludeVariableTypes: { let: true } }],
-        'flowtype/semi': ['error', 'never'],
+        'flowtype/require-variable-type': 'off',
         'flowtype/sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
-        'flowtype/space-after-type-colon': ['error', 'always', { allowLineBreak: true }],
-        'flowtype/space-before-generic-bracket': ['error', 'never'],
-        'flowtype/space-before-type-colon': ['error', 'never'],
         'flowtype/type-id-match': 'warn',
-        'flowtype/union-intersection-spacing': 'error',
         'flowtype/use-flow-type': 'warn',
         'flowtype/valid-syntax': 'warn',
 
@@ -403,5 +344,13 @@ module.exports = {
         // flowtype-errors specific linting rules for ESLint
         //
         'flowtype-errors/show-errors': 'warn',
+
+
+        //
+        // eslint-plugin-prettier
+        //
+        // prettier specific linting rules for ESLint
+        //
+        'prettier/prettier': ['error', prettierOptions],
     },
 }
