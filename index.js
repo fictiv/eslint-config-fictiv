@@ -20,7 +20,7 @@ module.exports = {
         'prettier/react',
     ],
     parserOptions: {
-        ecmaVersion: 7,
+        ecmaVersion: 2017,
         sourceType: 'module',
         ecmaFeatures: {
             experimentalObjectRestSpread: true,
