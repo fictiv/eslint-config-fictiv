@@ -2,8 +2,8 @@
 
 require('prettier-eslint-cli/dist/add-exception-handler') // want to do this first
 const getLogger = require('loglevel-colored-level-prefix')
-const parser = require('prettier-eslint-cli/dist/parser')
-const formatFiles = require('prettier-eslint-cli/dist/format-files')
+const parser = require('prettier-eslint-cli/dist/parser').default
+const formatFiles = require('prettier-eslint-cli/dist/format-files').default
 
 const prettierOptions = require('./prettierOptions')
 
