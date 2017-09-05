@@ -16,3 +16,6 @@ In your __.eslintrc.*__ add
 ```yaml
 extends: ['fictiv']
 ```
+
+## Exceptions
+Documented [here](./exceptions.md)
