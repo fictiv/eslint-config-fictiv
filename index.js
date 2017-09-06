@@ -179,7 +179,7 @@ module.exports = {
         'max-params': ['error', 3], // limits the number of parameters that can be used in the function declaration.
         'max-statements': 'off', // specify the maximum number of statement allowed in a function
         'max-statements-per-line': ['error', { max: 1 }], // specify the maximum number of statement allowed per line
-        'new-cap': 'error', // require a capital letter for constructors
+        'new-cap': 'off', // require a capital letter for constructors
         'newline-after-var': 'error', // require or disallow an empty newline after variable declarations
         'no-array-constructor': 'error', // disallow use of the Array constructor
         'no-bitwise': 'off', // disallow use of bitwise operators
@@ -200,7 +200,7 @@ module.exports = {
         'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }], // specify whether backticks, double or single quotes should be used
         'require-jsdoc': 'off', // Require JSDoc comment
         'sort-vars': 'off', // sort variables within the same declaration block
-        'sort-keys': ['error', 'asc', { caseSensitive: false, natural: true }], // sort variables within the same declaration block
+        'sort-keys': 'off', // sort keys
         'spaced-comment': 'off', // require or disallow a space immediately following the // or /* in a comment
 
         //
