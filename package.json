@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fictiv",
-  "version": "6.0.9",
+  "version": "7.0.0-beta.2",
   "description": "Fictiv's JS linter style",
   "main": "index.js",
   "repository": {
@@ -18,15 +18,22 @@
     "url": "https://github.com/fictiv/eslint-config-fictiv/issues"
   },
   "homepage": "https://github.com/fictiv/eslint-config-fictiv#readme",
+  "bin": {
+    "fictiv-fmt": "./fictiv-fmt.js"
+  },
   "dependencies": {
     "babel-eslint": "^7.2.3",
+    "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-flowtype-errors": "^3.3.1",
     "eslint-plugin-import": "https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz",
     "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.3.0"
+    "eslint-plugin-react": "^7.3.0",
+    "loglevel-colored-level-prefix": "^1.0.0",
+    "prettier-eslint-cli": "^4.3.0"
   },
   "devDependencies": {
     "eslint": ">=4.2.0",
