@@ -328,7 +328,7 @@ module.exports = {
         'flowtype/require-return-type': 'off',
         'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
         'flowtype/require-variable-type': 'off',
-        'flowtype/sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
+        'flowtype/sort-keys': 'off',
         'flowtype/type-id-match': 'warn',
         'flowtype/use-flow-type': 'warn',
         'flowtype/valid-syntax': 'warn',
