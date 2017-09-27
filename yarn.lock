@@ -442,7 +442,7 @@ eslint-plugin-flowtype@^2.35.0:
 
 "eslint-plugin-import@https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz":
   version "2.7.0"
-  resolved "https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz#1956d2c870420126fa146072728c1cbb2765268a"
+  resolved "https://github.com/Whoaa512/eslint-plugin-import/archive/f20a7743b6cbfb93210e13e7fee0ffc4b9e970f9.tar.gz#70dd2113898cfbe17c76fefafc8541bf4f4b607a"
   dependencies:
     builtin-modules "^1.1.1"
     contains-path "^0.1.0"
@@ -1076,13 +1076,13 @@ mimic-fn@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
 
-minimatch@^3.0.2, minimatch@^3.0.3:
+minimatch@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^3.0.4:
+minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   dependencies:
@@ -1311,6 +1311,10 @@ prettier-eslint@^7.0.0:
     require-relative "^0.8.7"
     typescript "^2.4.2"
     typescript-eslint-parser "^7.0.0"
+
+prettier@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.7.1.tgz#f674c52978e14ae7dffd7828e88cce07501d95dc"
 
 prettier@^1.6.0:
   version "1.6.1"
