@@ -254,12 +254,7 @@ module.exports = {
         'react/jsx-no-duplicate-props': 'error', // Prevent duplicate props in JSX
         'react/jsx-no-undef': 'error', // Disallow undeclared variables in JSX
         'react/jsx-pascal-case': 'error',
-        'react/jsx-sort-props': ['error', {
-            reservedFirst: true,
-            shorthandFirst: true,
-            callbacksLast: true,
-            ignoreCase: true,
-        }],
+        'react/jsx-sort-props': 'off',
         'react/jsx-uses-react': 'error', // Prevent React to be incorrectly marked as unused
         'react/jsx-uses-vars': 'error', // Prevent variables used in JSX to be incorrectly marked as unused
         'react/no-array-index-key': 'error',
