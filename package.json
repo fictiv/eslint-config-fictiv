@@ -33,11 +33,11 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "loglevel-colored-level-prefix": "^1.0.0",
-    "prettier-eslint-cli": "^4.4.0"
+    "prettier-eslint-cli": "^4.7.1"
   },
   "devDependencies": {
     "eslint": ">=4.2.0",
     "flow-bin": ">=0.36.0",
-    "prettier": "^1.7.4"
+    "prettier": "^1.11.1"
   }
 }
