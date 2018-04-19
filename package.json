@@ -22,7 +22,7 @@
     "fictiv-fmt": "./fictiv-fmt.js"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "8.2.1",
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-flowtype": "^2.35.0",
