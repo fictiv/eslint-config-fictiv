@@ -250,7 +250,7 @@ module.exports = {
         'react/jsx-boolean-value': 'error', // Enforce boolean attributes notation in JSX (fixable)
         'react/jsx-filename-extension': 'error',
         'react/jsx-key': 'error',
-        'react/jsx-no-bind': 'warn', // Prevent binding of functions within a JSX template definition
+        'react/jsx-no-bind': 'off', // Prevent binding of functions within a JSX template definition
         'react/jsx-no-duplicate-props': 'error', // Prevent duplicate props in JSX
         'react/jsx-no-undef': 'error', // Disallow undeclared variables in JSX
         'react/jsx-pascal-case': 'error',
