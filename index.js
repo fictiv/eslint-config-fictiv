@@ -320,7 +320,7 @@ module.exports = {
         'flowtype/no-types-missing-file-annotation': 'error',
         'flowtype/no-weak-types': 'off',
         'flowtype/require-parameter-type': 'off',
-        'flowtype/require-return-type': 'off',
+        'flowtype/require-return-type': 'warn',
         'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
         'flowtype/require-variable-type': 'off',
         'flowtype/sort-keys': 'off',
