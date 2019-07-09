@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fictiv",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "description": "Fictiv's JS linter style",
   "main": "index.js",
   "repository": {
