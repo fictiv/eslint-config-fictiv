@@ -21,6 +21,9 @@
   "bin": {
     "fictiv-fmt": "./fictiv-fmt.js"
   },
+  "scripts": {
+    "test": "echo 'all good'"
+  },
   "dependencies": {
     "@fictiv/eslint-plugin-import": "^2.18.0",
     "babel-eslint": "8.2.1",
