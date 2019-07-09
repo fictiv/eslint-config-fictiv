@@ -504,7 +504,7 @@ eslint-plugin-flowtype@^2.35.0:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-import@whoaa512/eslint-plugin-import#9a4b8fb:
+eslint-plugin-import@whoaa512/eslint-plugin-import#9a4b8fb741903c4292e74db120c20afc0ddd28ac:
   version "2.18.0"
   resolved "https://codeload.github.com/whoaa512/eslint-plugin-import/tar.gz/9a4b8fb741903c4292e74db120c20afc0ddd28ac"
   dependencies:

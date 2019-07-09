@@ -30,7 +30,7 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-flowtype-errors": "^3.3.1",
-    "eslint-plugin-import": "whoaa512/eslint-plugin-import#9a4b8fb",
+    "eslint-plugin-import": "whoaa512/eslint-plugin-import#9a4b8fb741903c4292e74db120c20afc0ddd28ac",
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
