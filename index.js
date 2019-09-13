@@ -318,7 +318,6 @@ module.exports = {
         'flowtype/no-dupe-keys': 'error',
         'flowtype/no-primitive-constructor-types': 'off',
         'flowtype/no-types-missing-file-annotation': 'error',
-        'flowtype/no-weak-types': 'off',
         'flowtype/require-parameter-type': 'off',
         'flowtype/require-return-type': 'warn',
         'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
