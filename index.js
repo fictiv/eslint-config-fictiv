@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 const prettierOptions = require('./prettierOptions')
 
 module.exports = {
@@ -40,30 +41,36 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/__tests__/**'],
+            files: ['**/__tests__ /**', '**/__mocks__/**', '*.test.*'],
             rules: {
                 'max-depth': 'off',
                 'max-nested-callbacks': 'off',
-            }
-        }
+                'no-magic-numbers': 'off',
+            },
+        },
     ],
     rules: {
-
         //
         // Override recommended rules
         //
         'no-console': 'error', // disallow use of console in the node environment
-        'no-unused-vars': ['error', { 'args': 'none' }], // disallow declaration of variables that are not used in the code
-        'no-empty-function': ['error', {'allow': [ // Disallow empty functions for arrow functions
-            'functions',
-            // 'arrowFunctions',
-            'generatorFunctions',
-            'methods',
-            'generatorMethods',
-            'getters',
-            'setters',
-            'constructors',
-        ]}],
+        'no-unused-vars': ['error', { args: 'none' }], // disallow declaration of variables that are not used in the code
+        'no-empty-function': [
+            'error',
+            {
+                allow: [
+                    // Disallow empty functions for arrow functions
+                    'functions',
+                    // 'arrowFunctions',
+                    'generatorFunctions',
+                    'methods',
+                    'generatorMethods',
+                    'getters',
+                    'setters',
+                    'constructors',
+                ],
+            },
+        ],
 
         //
         // Possible Errors
@@ -82,12 +89,12 @@ module.exports = {
         //
         'accessor-pairs': 'off', // Enforces getter/setter pairs in objects
         'block-scoped-var': 'error', // treat var statements as if they were block scoped
-        'complexity': 'warn', // specify the maximum cyclomatic complexity allowed in a program
+        complexity: 'warn', // specify the maximum cyclomatic complexity allowed in a program
         'consistent-return': 'error', // require return statements to either always or never specify values
-        'curly': 'error', // specify curly brace conventions for all control statements
+        curly: 'error', // specify curly brace conventions for all control statements
         'default-case': 'error', // require default case in switch statements
         'dot-notation': 'off', // encourages use of dot notation whenever possible
-        'eqeqeq': ['error', 'allow-null'], // require the use of === and !==
+        eqeqeq: ['error', 'allow-null'], // require the use of === and !==
         'guard-for-in': 'error', // make sure for-in loops have an if statement
         'no-alert': 'error', // disallow the use of alert, confirm, and prompt
         'no-caller': 'error', // disallow use of arguments.caller or arguments.callee
@@ -108,7 +115,10 @@ module.exports = {
         'no-labels': 'error', // disallow use of labeled statements
         'no-lone-blocks': 'error', // disallow unnecessary nested blocks
         'no-loop-func': 'error', // disallow creation of functions within loops
-        'no-magic-numbers': ['error', { ignore: [-3, -2, -1, 0, 1, 2, 3], ignoreArrayIndexes: true }], // disallow the use of magic numbers
+        'no-magic-numbers': [
+            'error',
+            { ignore: [-3, -2, -1, 0, 1, 2, 3], ignoreArrayIndexes: true },
+        ], // disallow the use of magic numbers
         'no-multi-str': 'error', // disallow use of multiline strings
         'no-native-reassign': 'error', // disallow reassignments of native objects
         'no-new-func': 'error', // disallow use of new operator for Function object
@@ -129,12 +139,18 @@ module.exports = {
         'no-useless-concat': 'error', // disallow unnecessary concatenation of literals or template literals
         'no-useless-return': 'error', // disallow redundant return statements
         'no-void': 'error', // disallow use of void operator
-        'no-warning-comments': ['warn', {'terms': ['todo', 'fixme', '@todo', '@hack', 'hack'], 'location': 'start'}], // disallow usage of configurable warning terms in comments': 'error', // e.g. TODO or FIXME
+        'no-warning-comments': [
+            'warn',
+            {
+                terms: ['todo', 'fixme', '@todo', '@hack', 'hack'],
+                location: 'start',
+            },
+        ], // disallow usage of configurable warning terms in comments': 'error', // e.g. TODO or FIXME
         'no-with': 'error', // disallow use of the with statement
         'prefer-promise-reject-errors': 'error', // require using Error objects as Promise rejection reasons
-        'radix': 'error', // require use of the second argument for parseInt()
+        radix: 'error', // require use of the second argument for parseInt()
         'vars-on-top': 'off', // require declaration of all vars at the top of their containing scope
-        'yoda': 'off', // require or disallow Yoda conditions
+        yoda: 'off', // require or disallow Yoda conditions
         'array-callback-return': 'error',
 
         //
@@ -142,7 +158,7 @@ module.exports = {
         //
         // These rules relate to using strict mode.
         //
-        'strict': ['error', 'never'], // controls location of Use Strict Directives
+        strict: ['error', 'never'], // controls location of Use Strict Directives
 
         //
         // Variables
@@ -153,7 +169,13 @@ module.exports = {
         'no-catch-shadow': 'error', // disallow the catch clause parameter name being the same as a variable in the outer scope
         'no-label-var': 'error', // disallow labels that share a name with a variable
         'no-shadow-restricted-names': 'error', // disallow shadowing of names such as arguments
-        'no-shadow': 'error', // disallow declaration of variables already declared in the outer scope
+        'no-shadow': [
+            // disallow declaration of variables already declared in the outer scope and globals
+            'error',
+            {
+                builtinGlobals: true,
+            },
+        ],
         // 'no-undef-init': 'error', // disallow use of undefined when initializing variables
         'no-undefined': 'off', // disallow use of undefined variable
         'no-use-before-define': ['error', 'nofunc'], // disallow use of variables before they are defined
@@ -164,7 +186,7 @@ module.exports = {
         // These rules are purely matters of style and are quite subjective.
         //
 
-        'camelcase': 'error', // require camel case names
+        camelcase: 'error', // require camel case names
         'consistent-this': 'off', // enforce consistent naming when capturing the current execution context
         'func-name-matching': 'error', // require function names to match the name of the variable or property to which they are assigned
         'func-names': 'error', // require function expressions to have a name
@@ -197,7 +219,11 @@ module.exports = {
         'no-unneeded-ternary': ['error', { defaultAssignment: false }], // disallow the use of ternary operators when a simpler alternative exists
         'one-var': ['error', 'never'], // require or disallow one variable declaration per function
         'operator-assignment': 'error', // require assignment operator shorthand where possible or prohibit it entirely
-        'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }], // specify whether backticks, double or single quotes should be used
+        quotes: [
+            'error',
+            'single',
+            { avoidEscape: true, allowTemplateLiterals: true },
+        ], // specify whether backticks, double or single quotes should be used
         'require-jsdoc': 'off', // Require JSDoc comment
         'sort-vars': 'off', // sort variables within the same declaration block
         'sort-keys': 'off', // sort keys
@@ -210,7 +236,6 @@ module.exports = {
         'no-path-concat': 'error',
         'no-new-require': 'error',
         'no-process-env': 'error', // disallow use of process.env
-
 
         //
         // ECMAScript 6
@@ -231,7 +256,11 @@ module.exports = {
         'object-shorthand': 'error', // require method and property shorthand syntax for object literals
         'prefer-arrow-callback': 'error', // suggest using arrow functions as callbacks
         'prefer-const': 'error', // suggest using const declaration for variables that are never modified after declared
-        'prefer-destructuring': ['error', { object: true, array: false }, { enforceForRenamedProperties: false }],
+        'prefer-destructuring': [
+            'error',
+            { object: true, array: false },
+            { enforceForRenamedProperties: false },
+        ],
         'prefer-reflect': 'off', // suggest using Reflect methods where applicable
         'prefer-rest-params': 'error',
         'prefer-spread': 'error', // suggest using the spread operator instead of .apply().
@@ -295,18 +324,20 @@ module.exports = {
         //
         // Enforce a convention in the order of require() / import statements.
         //      https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-        'import/order': ['error', {
-            'groups': [
-                'builtin',
-                'external',
-                'internal',
-                'parent',
-                'sibling',
-                'index',
-            ],
-            'newlines-between': 'always',
-        }],
-
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                ],
+                'newlines-between': 'always',
+            },
+        ],
 
         //
         // eslint-plugin-flowtype
@@ -314,27 +345,22 @@ module.exports = {
         // flowtype specific linting rules for ESLint
         //
         'flowtype/boolean-style': ['error', 'boolean'],
-        'flowtype/define-flow-type': 'warn',
         'flowtype/no-dupe-keys': 'error',
         'flowtype/no-primitive-constructor-types': 'off',
         'flowtype/no-types-missing-file-annotation': 'error',
-        'flowtype/no-weak-types': 'off',
-        'flowtype/require-parameter-type': 'off',
-        'flowtype/require-return-type': 'warn',
-        'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
-        'flowtype/require-variable-type': 'off',
+        'flowtype/no-weak-types': 2,
+        'flowtype/require-valid-file-annotation': [
+            'warn',
+            'never',
+            { annotationStyle: 'line' },
+        ],
         'flowtype/sort-keys': 'off',
-        'flowtype/type-id-match': 'warn',
-        'flowtype/use-flow-type': 'warn',
-        'flowtype/valid-syntax': 'warn',
 
         //
         // eslint-plugin-flowtype-errors
         //
         // flowtype-errors specific linting rules for ESLint
         //
-        'flowtype-errors/show-errors': 'warn',
-
 
         //
         // eslint-plugin-prettier
@@ -342,5 +368,8 @@ module.exports = {
         // prettier specific linting rules for ESLint
         //
         'prettier/prettier': ['error', prettierOptions],
+
+        // jest specific rules
+        'jest/prefer-expect-assertions': 'error',
     },
 }
