@@ -7,7 +7,6 @@ module.exports = {
         'plugin:jest/recommended',
         'plugin:promise/recommended',
         'prettier',
-        'prettier/flowtype',
         'prettier/react',
     ],
     parserOptions: {
@@ -25,17 +24,12 @@ module.exports = {
         'import',
         'jest',
         'promise',
-        'flowtype-errors',
-        'flowtype',
         'prettier',
     ],
     settings: {
         'import/internal-module-folders': ['~/'],
         'import/resolver': {
             'babel-module': {},
-        },
-        flowtype: {
-            onlyFilesWithFlowAnnotation: true,
         },
     },
     overrides: [
@@ -306,36 +300,6 @@ module.exports = {
             ],
             'newlines-between': 'always',
         }],
-
-
-        //
-        // eslint-plugin-flowtype
-        //
-        // flowtype specific linting rules for ESLint
-        //
-        'flowtype/boolean-style': ['error', 'boolean'],
-        'flowtype/define-flow-type': 'warn',
-        'flowtype/no-dupe-keys': 'error',
-        'flowtype/no-primitive-constructor-types': 'off',
-        'flowtype/no-types-missing-file-annotation': 'error',
-        'flowtype/no-weak-types': 'off',
-        'flowtype/require-parameter-type': 'off',
-        'flowtype/require-return-type': 'warn',
-        'flowtype/require-valid-file-annotation': ['warn', 'never', { annotationStyle: 'line' }],
-        'flowtype/require-variable-type': 'off',
-        'flowtype/sort-keys': 'off',
-        'flowtype/type-id-match': 'warn',
-        'flowtype/use-flow-type': 'warn',
-        'flowtype/valid-syntax': 'warn',
-
-        //
-        // eslint-plugin-flowtype-errors
-        //
-        // flowtype-errors specific linting rules for ESLint
-        //
-        'flowtype-errors/show-errors': 'warn',
-
-
         //
         // eslint-plugin-prettier
         //
